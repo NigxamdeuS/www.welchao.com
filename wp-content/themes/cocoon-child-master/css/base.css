@@ -1,0 +1,104 @@
+ul, ol, dl, dd, dt, li, p{
+	margin:0;padding:0;
+	list-style:none;
+}
+
+@media print, screen and (min-width: 1024px){
+    .sp{display:none;}
+}
+@media screen and (max-width: 1023px){
+    .pc{display:none;}
+}
+
+*:focus {outline: none;}
+.right{text-align:right !important;}.left{text-align:left;}.center{text-align:center;}
+.none{ display:none !important; }
+.block{ display:block !important; }
+.trans{transition:all 1.0s;}
+.scroll-in{ visibility:hidden; }
+.displayed{visibility:visible;}
+.w100{ width: 100%;}
+.table.tabled{display:table !important;}
+
+.thumb img{
+    width:100%;
+    object-fit:cover;
+    display:block;
+    border-radius:20px;
+}
+.aspect_1-1 img{ aspect-ratio:1/1;}
+
+.flex{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+	align-items:center;
+}
+    .flex.line-2 > *{ width:48%; }
+    .flex.line-3 > *{ width:30.5%; }
+@media screen and (max-width: 1023px){
+    .flex.undo{display:block;}
+    .flex.undo > *{width:auto !important;}
+}
+
+
+.timeIn.displayed,
+.fadeIn{
+	animation-name:fadeInAnime;
+	animation-duration:1.5s;
+	animation-fill-mode:forwards;
+	animation-delay:0.1s;
+	opacity:0;
+}
+	@keyframes fadeInAnime{
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+.timeDown.displayed,
+.fadeDown{
+	animation-name:fadeDownAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	animation-delay:0.1s;
+	opacity:0;
+}
+	@keyframes fadeDownAnime{
+		from { opacity: 0; transform: translateY(-50px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+.timeUp.displayed,
+.fadeUp{
+	animation-name:fadeUpAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	animation-delay:0.1s;
+	opacity:0;
+}
+	@keyframes fadeUpAnime{
+		from { opacity: 0; transform: translateY(50px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+.timeLeft.displayed,
+.fadeLeft{
+	animation-name:fadeLeftAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	animation-delay:0.1s;
+	opacity:0;
+}
+	@keyframes fadeLeftAnime{
+		from { opacity: 0; transform: translateX(-75px); }
+		to { opacity: 1; transform: translateX(0); }
+	}
+.timeRight.displayed,
+.fadeRight{
+	animation-name:fadeRightAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	animation-delay:0.1s;
+	opacity:0;
+}
+	@keyframes fadeRightAnime{
+		from { opacity: 0; transform: translateX(75px); }
+		to { opacity: 1; transform: translateX(0); }
+	}
